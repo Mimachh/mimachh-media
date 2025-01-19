@@ -77,6 +77,10 @@ class Media extends Model
         ]);
     }
 
+    // TODO: a mon avis ici il faut plutôt une methode static a la creation d'une class
+    // au moment de la création je récupère les medias qui sont dans la request, je les traite ici
+    // ou alors pour l'instant je ne le fais que pour le job de conversions
+
     /**
      * Update an existing media instance with new attributes.
      *
@@ -132,4 +136,7 @@ class Media extends Model
     // // Utiliser la méthode statique pour créer et associer le média
     // $media = Media::createMedia($file, $product);
     // $mediaUrls = $product->getMediaUrls();
+
+
+
 }

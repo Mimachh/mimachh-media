@@ -4,6 +4,7 @@ namespace Mimachh\Media\Traits;
 
 use Illuminate\Support\Facades\Storage;
 use Mimachh\Media\Models\Media;
+use Intervention\Image\Laravel\Facades\Image;
 
 trait HasMedia
 {
@@ -104,4 +105,23 @@ trait HasMedia
             return Storage::url($media->path);
         });
     }
+
+    // il faudra ajouter à la methode qui crée les images : 
+    // if (method_exists($this, 'getMediaConversions')) {
+    //     ProcessMediaConversions::dispatch($this, $media);
+    // }
+
+        /**
+     * Define the media conversions for the model.
+     *
+     * @return array
+     */
+    // public function getMediaConversions(): array
+    // {
+    //     return [
+    //         'thumbnail' => 150, // Crée une miniature de 150px de largeur
+    //         'medium' => 300,    // Crée une image de taille moyenne de 300px de largeur
+    //         'large' => 600,     // Crée une grande image de 600px de largeur
+    //     ];
+    // }
 }
